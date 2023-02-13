@@ -1,5 +1,5 @@
 {% set name = "github-activity" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
-  sha256: 6749892ea6bff4c5e2b339269215883bc179a3c28eb6fdd57aa1ba43ca166269
+  sha256: 99cbe1a817b3ad0bd0d90cdb76313809bf7dad29e7d06e01eb0b28c1adc3d0dd
 
 build:
   entry_points:
