@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
   sha256: 99cbe1a817b3ad0bd0d90cdb76313809bf7dad29e7d06e01eb0b28c1adc3d0dd
 
 build:
@@ -14,18 +14,18 @@ build:
     - github-activity = github_activity.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - git
     - markdown
     - numpy
     - pandas
-    - python >=3.6
+    - python >={{ python_min }}
     - python-dateutil
     - requests
     - tqdm
@@ -38,6 +38,7 @@ test:
     - github-activity --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/executablebooks/github-activity
