@@ -1,5 +1,5 @@
 {% set name = "github-activity" %}
-{% set version = "0.3.0" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,20 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
-  sha256: 99cbe1a817b3ad0bd0d90cdb76313809bf7dad29e7d06e01eb0b28c1adc3d0dd
+  sha256: 01f4ecd8a5b522be8aa70f94bc80c1b5d3ab3f76e51a1b8121aa19c497b4986d
 
 build:
   entry_points:
     - github-activity = github_activity.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - git
     - markdown
