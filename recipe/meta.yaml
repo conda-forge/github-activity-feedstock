@@ -1,5 +1,5 @@
 {% set name = "github-activity" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
-  sha256: 01f4ecd8a5b522be8aa70f94bc80c1b5d3ab3f76e51a1b8121aa19c497b4986d
+  sha256: 3bdf5a9d5108ad8cce44fdccf8d9d4268d67307866b9e4e438c8c6edc3d012bf
 
 build:
   entry_points:
