@@ -1,5 +1,5 @@
 {% set name = "github-activity" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/github_activity-{{ version }}.tar.gz
-  sha256: 02e0fdc070149d4f7865ca448081cfec038057d36989bcad4b81ccda43cbf696
+  sha256: 4634a026a5e548af8f36b19c04fd0cf0ea4c020729f32e190f73bacaf226004d
 
 build:
   entry_points:
@@ -28,6 +28,7 @@ requirements:
     - pandas
     - python >={{ python_min }}
     - python-dateutil
+    - pytz
     - requests
     - tqdm
 
